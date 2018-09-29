@@ -1,0 +1,18 @@
+﻿@model Pergunta
+@{
+    Layout = "_Layout";
+}
+
+<form action="/home/create" method="post">
+    @* Usando o Helper C# *@
+    @Html.EditorFor(a => a.Descricao)
+
+
+
+    @* Usando o HTML *@
+    @*<input type="text" name="Descricao" value="" />
+    <br />
+    <input type="text" name="Autor" value="" />
+    <br />*@
+    <input type="submit" value="Salvar" />
+</form>

@@ -1,4 +1,5 @@
 ﻿using Jeffao_Web.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,35 @@ namespace Jeffao_Web.Controllers
             //Retornando uma View Específica
             //return View("OutraView");
         }
+
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(Pergunta pergunta)
+        {
+            if(ModelState.IsValid)
+            {
+                var a = pergunta;
+            }
+            return View();
+        }
+
+        ////Usando uma forma não tipada para capturar valores no Formulário
+        //[HttpPost]
+        //public IActionResult Create(IFormCollection collection)
+        //{
+        //    var des = collection["Descricao"];
+        //    var aut = collection["Autor"];
+
+        //    return View();
+        //}
+
 
         public IActionResult Ajuda()
         {
