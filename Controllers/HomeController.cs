@@ -8,9 +8,9 @@ namespace Jeffao_Web.Controllers
 {
     public class HomeController: Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return DateTime.Now.ToString();
+            return View();
         }
 
     }
