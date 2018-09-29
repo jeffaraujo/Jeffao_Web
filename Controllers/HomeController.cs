@@ -11,10 +11,22 @@ namespace Jeffao_Web.Controllers
         public IActionResult Index()
         {
             //Retornando a View com o nome do método
-            //return View();
+            return View();
             //Retornando uma View Específica
-            return View("OutraView");
+            //return View("OutraView");
         }
+
+        public IActionResult Ajuda()
+        {
+            return View();
+        }
+
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+
+
 
     }
 }

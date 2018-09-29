@@ -9,6 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Home\Ajuda.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\Sobre.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Home\OutraView.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
