@@ -27,28 +27,28 @@ namespace Jeffao_Web
             //});
             //Configurando rota
             app.UseMvc(routes => {
-                //routes.MapRoute(
-                //    name: "default",
-                //    template: "{controller=Home}/{action=Index}/{id?}"
-                //    );
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                    );
                 //Sempre que montar as rotas, montar da mais específica (Em cima) para mais genérica (Em baixo)
-                routes.MapRoute(
-                    name: "autor",
-                    template: "autor/{nome}",
-                    defaults:new { controller="Autor", action="Index" }
-                    );
+                //routes.MapRoute(
+                //    name: "autor",
+                //    template: "autor/{nome}",
+                //    defaults:new { controller="Autor", action="Index" }
+                //    );
 
-                routes.MapRoute(
-                    name: "autoresDoAno",
-                    template: "{ano:int}/autor",
-                    defaults: new { controller = "Autor", action = "ListaDosAutoresDoAno" }
-                    );
+                //routes.MapRoute(
+                //    name: "autoresDoAno",
+                //    template: "{ano:int}/autor",
+                //    defaults: new { controller = "Autor", action = "ListaDosAutoresDoAno" }
+                //    );
 
-                routes.MapRoute(
-                    name: "topicosdacategoria",
-                    template: "{categoria}/{topico}",
-                    defaults: new { controller = "Topicos", action = "Index" }
-                    );
+                //routes.MapRoute(
+                //    name: "topicosdacategoria",
+                //    template: "{categoria}/{topico}",
+                //    defaults: new { controller = "Topicos", action = "Index" }
+                //    );
 
             });
         }

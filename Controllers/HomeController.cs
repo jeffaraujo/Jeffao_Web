@@ -10,6 +10,10 @@ namespace Jeffao_Web.Controllers
     {
         public IActionResult Index()
         {
+            //Trabalhando com envio de variáveis / objetos
+            ViewBag.Nome = "Jefão";
+            ViewData["Nome"] = "Jefão ViewData";
+
             //Retornando a View com o nome do método
             return View();
             //Retornando uma View Específica
