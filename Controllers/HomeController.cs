@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Jeffao_Web.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,14 @@ namespace Jeffao_Web.Controllers
             ViewBag.Nome = "Jefão";
             ViewData["Nome"] = "Jefão ViewData";
 
+
+            //Tipificando a View usando um objeto (Model)
+            var pergunta = new Pergunta() { ID = 1, Autor = "Jefão", Descricao = "La Pergunta?" };
+
+
+            return View(pergunta);
             //Retornando a View com o nome do método
-            return View();
+            //return View();
             //Retornando uma View Específica
             //return View("OutraView");
         }

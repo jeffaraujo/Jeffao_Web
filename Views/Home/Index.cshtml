@@ -1,10 +1,19 @@
-﻿@{ 
+﻿@* Usando o _ViewImports para importar as NameSpaces *@
+@model Pergunta
+
+
+@{ 
     Layout = "_Layout";
 }
  
 
    <h1>Home</h1>
-
+    @* Usando ViewBag e ViewData *@
    <h1>ViewBag @ViewBag.Nome</h1>
    <h1>ViewData @ViewData["Nome"]</h1>
     <p>Twitter @@jeffaraujo</p>
+
+<p>@Model.ID</p>
+<p>@Model.Descricao</p>
+<p>@Model.Autor</p>
+
