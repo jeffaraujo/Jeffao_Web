@@ -19,6 +19,7 @@ namespace Jeffao_Web
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseStaticFiles();
 
             //Configuração de Middleware
             //app.Run(async (context) =>
