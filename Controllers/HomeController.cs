@@ -10,7 +10,10 @@ namespace Jeffao_Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            //Retornando a View com o nome do método
+            //return View();
+            //Retornando uma View Específica
+            return View("OutraView");
         }
 
     }
