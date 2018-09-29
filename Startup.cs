@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Jeffao_Web.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,12 +16,22 @@ namespace Jeffao_Web
         //Injeção de Dependencia
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
+
+            //Selecionando o Provider do EF Core
+            services.AddDbContext<PerguntasContext>(o => o.UseSqlServer(connection));
             services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+            //Middleware para usar arquivos estático (Imagens)
             app.UseStaticFiles();
+
+            if(env.IsDevelopment())
+                app.UseDeveloperExceptionPage(); //Middleware para mostra erros
+
 
             //Configuração de Middleware
             //app.Run(async (context) =>

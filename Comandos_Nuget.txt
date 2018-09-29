@@ -1,0 +1,84 @@
+﻿Each package is licensed to you by its owner. NuGet is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may include dependencies which are governed by additional licenses. Follow the package source (feed) URL to determine any dependencies.
+
+Package Manager Console Host Version 4.7.0.5212
+
+Type 'get-help NuGet' to see all available NuGet commands.
+
+PM> Install-Package Microsoft.EntityFrameworkCore.SqlServer
+  CACHE https://api.nuget.org/v3/registration3-gz-semver2/microsoft.entityframeworkcore.sqlserver/index.json
+Restoring packages for D:\Jeffao_Web\Jeffao_Web.csproj...
+Installing NuGet package Microsoft.EntityFrameworkCore.SqlServer 2.1.3.
+Committing restore...
+Writing lock file to disk. Path: D:\Jeffao_Web\obj\project.assets.json
+Restore completed in 640,82 ms for D:\Jeffao_Web\Jeffao_Web.csproj.
+Executing nuget actions took 1,3 sec
+Time Elapsed: 00:00:02.7698196
+PM> Install-Package Microsoft.EntityFrameworkCore.Tools
+  CACHE https://api.nuget.org/v3/registration3-gz-semver2/microsoft.entityframeworkcore.tools/index.json
+Restoring packages for D:\Jeffao_Web\Jeffao_Web.csproj...
+Installing NuGet package Microsoft.EntityFrameworkCore.Tools 2.1.3.
+Committing restore...
+Writing lock file to disk. Path: D:\Jeffao_Web\obj\project.assets.json
+Restore completed in 638,75 ms for D:\Jeffao_Web\Jeffao_Web.csproj.
+Executing nuget actions took 717,87 ms
+Time Elapsed: 00:00:01.6083799
+PM> Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design
+  CACHE https://api.nuget.org/v3/registration3-gz-semver2/microsoft.visualstudio.web.codegeneration.design/index.json
+Restoring packages for D:\Jeffao_Web\Jeffao_Web.csproj...
+Installing NuGet package Microsoft.VisualStudio.Web.CodeGeneration.Design 2.1.4.
+Committing restore...
+Assets file has not changed. Skipping assets file writing. Path: D:\Jeffao_Web\obj\project.assets.json
+Restore completed in 621,52 ms for D:\Jeffao_Web\Jeffao_Web.csproj.
+Executing nuget actions took 77,07 ms
+Time Elapsed: 00:00:00.9956411
+PM> Add-Migration First
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.3-rtm-32065 initialized 'PerguntasContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+To undo this action, use Remove-Migration.
+PM> Script-Migration
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.3-rtm-32065 initialized 'PerguntasContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+PM> Update-Database
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.3-rtm-32065 initialized 'PerguntasContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (746ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [EFGetStarted.AspNetCore.NewDb];
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (197ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [EFGetStarted.AspNetCore.NewDb] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [__EFMigrationsHistory] (
+          [MigrationId] nvarchar(150) NOT NULL,
+          [ProductVersion] nvarchar(32) NOT NULL,
+          CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+      );
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+infoinfo:    Applying migration '20180929174933_First'.
+: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20180929174933_First'.
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Perguntas] (
+          [ID] int NOT NULL IDENTITY,
+          [Autor] nvarchar(max) NULL,
+          [Descricao] nvarchar(max) NOT NULL,
+          CONSTRAINT [PK_Perguntas] PRIMARY KEY ([ID])
+      );
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+      VALUES (N'20180929174933_First', N'2.1.3-rtm-32065');
+Done.
+PM> 
